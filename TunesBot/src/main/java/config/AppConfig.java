@@ -11,19 +11,37 @@ import lombok.Setter;
  * Created by deepak.barr on 20/02/16.
  */
 public class AppConfig {
-  @Getter
-  @Setter
   @JsonProperty
   @NotNull
   public String musicLocation;
-  @Getter
-  @Setter
   @JsonProperty
   @NotNull
   public String musicMetaLocation;
-  @Getter
-  @Setter
   @JsonProperty
   @NotNull
   public String adsLocation;
+
+  public String getMusicLocation() {
+    return musicLocation;
+  }
+
+  public void setMusicLocation(String musicLocation) {
+    this.musicLocation = musicLocation;
+  }
+
+  public String getMusicMetaLocation() {
+    return musicMetaLocation;
+  }
+
+  public void setMusicMetaLocation(String musicMetaLocation) {
+    this.musicMetaLocation = musicMetaLocation;
+  }
+
+  public String getAdsLocation() {
+    return adsLocation;
+  }
+
+  public void setAdsLocation(String adsLocation) {
+    this.adsLocation = adsLocation;
+  }
 }

@@ -7,6 +7,6 @@ server:
     port: 8081
 
 appConfig:
-  musicLocation: /Users/deepak.barr/hackathon/codeSpace/music
-  musicMetaLocation: /Users/deepak.barr/hackathon/codeSpace/TunesBot/src/main/resources/musicfile.json
-  adsLocation: /Users/deepak.barr/hackathon/codeSpace/TunesBot/src/main/resources/ad
+  musicLocation: /Users/pragya.mittal/workspace/hackathon/codeSpace/TunesBot/src/main/resources/music
+  musicMetaLocation: /Users/pragya.mittal/workspace/hackathon/codeSpace/TunesBot/src/main/resources/musicfile.json
+  adsLocation: /Users/pragya.mittal/workspace/hackathon/codeSpace/TunesBot/src/main/resources/ad

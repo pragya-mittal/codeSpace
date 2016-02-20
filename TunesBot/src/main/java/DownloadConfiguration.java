@@ -11,10 +11,17 @@ import javax.validation.constraints.NotNull;
  * Created by pragya.mittal on 2/20/16.
  */
 public class DownloadConfiguration extends Configuration {
+
   @Valid
   @NotNull
   @JsonProperty("appConfig")
-  @Getter
-  @Setter
   AppConfig appConfig;
+
+  public AppConfig getAppConfig() {
+    return appConfig;
+  }
+
+  public void setAppConfig(AppConfig appConfig) {
+    this.appConfig = appConfig;
+  }
 }
