@@ -12,17 +12,17 @@ public class DownloadServer extends Service<DownloadConfiguration> {
 
     @Override
     public void initialize(Bootstrap<DownloadConfiguration> bootstrap) {
-        bootstrap.setName("blog");
+        bootstrap.setName("songDownloader");
     }
 
     @Override
     public void run(DownloadConfiguration configuration, Environment environment) throws Exception {
-        String musicLoc ="/Users/pragya.mittal/workspace/hackathon/TunesBot/music/";
+        String musicLoc ="src/main/resources/music/";
         String jsonFile = "src/main/resources/musicfile.json";
 
         SongDownloader songDownloader = new SongDownloader(musicLoc, jsonFile);
         songDownloader.createurlNDownloadFile();
-        DownloadResource downloadResource = new DownloadResource("/Users/pragya.mittal/workspace/hackathon/TunesBot/music");
+        DownloadResource downloadResource = new DownloadResource("src/main/resources/music");
         environment.addResource(downloadResource);
 
     }

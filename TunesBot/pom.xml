@@ -8,20 +8,12 @@
     <artifactId>com.TunesBot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
-
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.8</version>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.soundcloud</groupId>
-            <artifactId>java-api-wrapper</artifactId>
-            <version>1.0.0</version>
         </dependency>
 
         <dependency>
