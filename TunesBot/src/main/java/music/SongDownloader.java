@@ -12,11 +12,13 @@ public class SongDownloader {
     String musicLoc;
     String jsonFile;
     String client_id = "02gUJC0hH2ct1EGOcYXQIzRFU91c72Ea";
+
     public SongDownloader(String musicLoc, String jsonFile) {
         this.musicLoc = musicLoc;
         this.jsonFile = jsonFile;
 
     }
+
     class URLObj {
         String songName;
         String artistName;
@@ -29,11 +31,32 @@ public class SongDownloader {
         }
     }
 
+    public String getSongName(String trackId) {
+        Map<String, String> mapTrackName = getMapTrackName();
+        for (Map.Entry entry : mapTrackName.entrySet()) {
+            if (entry.getKey().equals(trackId)) {
+                return (String) entry.getValue();
+            }
+        }
+        return null;
+    }
+
+    public Map<String, String> getMapTrackName() {
+        MusicParser musicParser = new MusicParser(jsonFile);
+        Map<String, MusicConf> musicConfMap = musicParser.getMusicConf();
+        Map<String, String> mapNameNTrack = new HashMap<>();
+        for (Map.Entry entry : musicConfMap.entrySet() ) {
+            MusicConf musicConf = (MusicConf)entry.getValue();
+            mapNameNTrack.put(musicConf.getTrackid(), musicConf.getTitle() + "_" + musicConf.getArtist());
+        }
+        return mapNameNTrack;
+    }
+
     public void createurlNDownloadFile() throws Exception {
         MusicConf musicConf;
         DownloadManager downloadManager;
-        MusicParser musicParser = new MusicParser(jsonFile);
         List<URLObj> urls = new ArrayList<>();
+        MusicParser musicParser = new MusicParser(jsonFile);
         Map<String, MusicConf> musicConfMap = musicParser.getMusicConf();
         for (Map.Entry entry : musicConfMap.entrySet() ) {
             String url = "https://api.soundcloud.com/tracks/";
