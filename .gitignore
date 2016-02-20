@@ -1,0 +1,23 @@
+# Maven
+target
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea
+
+# Eclipse
+.classpath
+.project
+.settings
+.externalToolBuilders
+maven-eclipse.xml
+
+#ActiveMQ
+activemq-data
+#build
+
+#log files
+logs
+*.log
