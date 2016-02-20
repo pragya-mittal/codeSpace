@@ -27,6 +27,7 @@ public class DownloadServer extends Application<DownloadConfiguration> {
 
   private void scheduleDownloader(AppConfig conf) {
     Timer timer = new Timer();  //At this line a new Thread will be created
-    timer.schedule(new SongDownloadTask(conf), 1 * MILLIS_IN_HOUR);
+    timer.schedule(new SongDownloadTask(conf), 5000);
   }
+
 }

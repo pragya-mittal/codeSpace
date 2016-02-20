@@ -2,6 +2,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import config.AppConfig;
 import io.dropwizard.Configuration;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -12,7 +13,8 @@ import javax.validation.constraints.NotNull;
 public class DownloadConfiguration extends Configuration {
   @Valid
   @NotNull
-  @JsonProperty
+  @JsonProperty("appConfig")
   @Getter
+  @Setter
   AppConfig appConfig;
 }

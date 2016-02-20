@@ -6,18 +6,7 @@ server:
   - type: http
     port: 8081
 
-
 appConfig:
-  musicLocation:
+  musicLocation: /Users/deepak.barr/hackathon/codeSpace/music
   musicMetaLocation: /Users/deepak.barr/hackathon/codeSpace/TunesBot/src/main/resources/musicfile.json
   adsLocation: /Users/deepak.barr/hackathon/codeSpace/TunesBot/src/main/resources/ad
-
-logging:
-  level: DEBUG
-  appenders:
-    - type: console
-    - type: file
-      threshold: DEBUG
-      archive: false
-      currentLogFilename: /tmp/downloadserver.log
-      timeZone: Asia/Kolkata

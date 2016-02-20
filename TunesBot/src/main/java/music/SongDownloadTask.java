@@ -19,6 +19,8 @@ public class SongDownloadTask extends TimerTask {
   @Override
   public void run() {
     try {
+
+      System.out.println("****** Rnning.....");
       MusicConf musicConf;
       DownloadManager downloadManager;
       MusicParser musicParser = new MusicParser(conf.getMusicMetaLocation());
@@ -41,12 +43,7 @@ public class SongDownloadTask extends TimerTask {
 
   public String getSongName(String trackId) {
     Map<String, String> mapTrackName = getMapTrackName();
-    for (Map.Entry entry : mapTrackName.entrySet()) {
-      if (entry.getKey().equals(trackId)) {
-        return (String) entry.getValue();
-      }
-    }
-    return null;
+    return mapTrackName.get(trackId);
   }
 
   public Map<String, String> getMapTrackName() {
