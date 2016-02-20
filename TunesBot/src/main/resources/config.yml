@@ -1,0 +1,17 @@
+server:
+  applicationConnectors:
+  - type: http
+    port: 8080
+  adminConnectors:
+  - type: http
+    port: 8081
+
+logging:
+  level: DEBUG
+  appenders:
+    - type: console
+    - type: file
+      threshold: DEBUG
+      archive: false
+      currentLogFilename: /tmp/downloadserver.log
+      timeZone: Asia/Kolkata

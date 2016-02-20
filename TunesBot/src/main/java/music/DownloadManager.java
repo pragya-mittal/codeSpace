@@ -1,17 +1,22 @@
 package music;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Created by pragya.mittal on 2/20/16.
  */
+
 public class DownloadManager {
     SongDownloader.URLObj[] urls;
     String dirname;
+    private static final Logger log = LoggerFactory.getLogger(DownloadManager.class);
 
     public DownloadManager(String dirname, SongDownloader.URLObj[] urllist) {
         this.urls = urllist;
@@ -37,9 +42,8 @@ public class DownloadManager {
                 outstream.write(buffer, 0, len);
             }
             outstream.close();
-        }
-        else {
-            System.out.println("File exists");
+        } else {
+            log.info("File exists");
         }
     }
 }

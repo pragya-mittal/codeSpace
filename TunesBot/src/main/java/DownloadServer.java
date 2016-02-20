@@ -1,29 +1,29 @@
-import com.yammer.dropwizard.Service;
-import com.yammer.dropwizard.config.Bootstrap;
-import com.yammer.dropwizard.config.Environment;
+import io.dropwizard.Application;
+import io.dropwizard.setup.Bootstrap;
+import io.dropwizard.setup.Environment;
 import music.SongDownloader;
 
 
-public class DownloadServer extends Service<DownloadConfiguration> {
+public class DownloadServer extends Application<DownloadConfiguration> {
 
     public static void main(String[] args) throws Exception {
-        new DownloadServer().run(new String[] { "server" });
+        new DownloadServer().run(args);
     }
 
     @Override
     public void initialize(Bootstrap<DownloadConfiguration> bootstrap) {
-        bootstrap.setName("songDownloader");
+//        bootstrap.setName("songDownloader");
     }
 
     @Override
     public void run(DownloadConfiguration configuration, Environment environment) throws Exception {
-        String musicLoc ="src/main/resources/music/";
-        String jsonFile = "src/main/resources/musicfile.json";
+        String musicLoc ="/Users/pragya.mittal/workspace/hackathon/deployment/music";
+        String jsonFile = "/Users/pragya.mittal/workspace/hackathon/deployment/musicfile.json";
 
         SongDownloader songDownloader = new SongDownloader(musicLoc, jsonFile);
         songDownloader.createurlNDownloadFile();
         DownloadResource downloadResource = new DownloadResource(musicLoc, jsonFile);
-        environment.addResource(downloadResource);
+        environment.jersey().register(downloadResource);
 
     }
 
