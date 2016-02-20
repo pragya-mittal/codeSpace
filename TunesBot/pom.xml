@@ -21,13 +21,6 @@
             <artifactId>dropwizard-core</artifactId>
             <version>0.8.0-rc2</version>
         </dependency>
-
-        <!--<dependency>-->
-            <!--<groupId>com.yammer.dropwizard</groupId>-->
-            <!--<artifactId>dropwizard-core</artifactId>-->
-            <!--<version>0.6.2</version>-->
-        <!--</dependency>-->
-
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-io</artifactId>
@@ -39,7 +32,6 @@
             <artifactId>lombok</artifactId>
             <version>1.16.4</version>
         </dependency>
-
 
     </dependencies>
 

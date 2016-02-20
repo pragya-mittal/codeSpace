@@ -9,23 +9,25 @@ import java.net.URLConnection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import pojo.SongInfo;
+
 /**
  * Created by pragya.mittal on 2/20/16.
  */
 
 public class DownloadManager {
-    SongDownloader.URLObj[] urls;
+    SongInfo[] songs;
     String dirname;
     private static final Logger log = LoggerFactory.getLogger(DownloadManager.class);
 
-    public DownloadManager(String dirname, SongDownloader.URLObj[] urllist) {
-        this.urls = urllist;
+    public DownloadManager(String dirname, SongInfo[] songs) {
+        this.songs = songs;
         this.dirname = dirname;
     }
 
     public void downLoadFiles() throws Exception {
-        for (SongDownloader.URLObj url : urls) {
-            downloadToFile(dirname + "/" + url.songName + "_" + url.artistName + ".mp3", url.url);
+        for (SongInfo song : songs) {
+            downloadToFile(dirname + "/" + song.getSongName() + "_" + song.getSongName() + ".mp3", song.getUrl());
         }
     }
 

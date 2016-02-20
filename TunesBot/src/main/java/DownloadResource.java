@@ -1,3 +1,4 @@
+import config.AppConfig;
 import music.MusicConf;
 import music.MusicParser;
 
@@ -15,32 +16,27 @@ import javax.ws.rs.core.Response;
 @Path("/music")
 public class DownloadResource {
 
-    String musicLoc = "";
-    String jsonFile = "";
+  AppConfig conf;
 
-    public DownloadResource(String musicLoc, String jsonFile) {
-        this.musicLoc = musicLoc;
-        this.jsonFile = jsonFile;
-    }
+  public DownloadResource(AppConfig conf) {
+    this.conf = conf;
+  }
 
-    @GET
-    @Path("getMusicList")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Map<String, MusicConf> getMusicList() throws Exception {
-        MusicParser musicParser = new MusicParser(jsonFile);
-        return musicParser.getMusicConf();
-//        return Response.ok(new File(musicLoc+"/abc.mp3"), MediaType.APPLICATION_OCTET_STREAM)
-//                .header("Content-Disposition", "attachment; filename=\"abc_pragya.mp3\"")
-//                .build();
-    }
+  @GET
+  @Path("getMusicList")
+  @Produces(MediaType.APPLICATION_JSON)
+  public Map<String, MusicConf> getMusicList() throws Exception {
+    MusicParser musicParser = new MusicParser(conf.getMusicMetaLocation());
+    return musicParser.getMusicConf();
+  }
 
-    @GET
-    @Path("getMusic")
-    @Produces(MediaType.APPLICATION_OCTET_STREAM)
-    public Response getMusic(@QueryParam("trackId") String trackId) throws Exception {
-        return Response.ok(new File(musicLoc+"/abc.mp3"), MediaType.APPLICATION_OCTET_STREAM)
-                .header("Content-Disposition", "attachment; filename=\"abc_pragya.mp3\"")
-                .build();
-    }
+  @GET
+  @Path("getMusic")
+  @Produces(MediaType.APPLICATION_OCTET_STREAM)
+  public Response getMusic(@QueryParam("trackId") String trackId) throws Exception {
+    return Response.ok(new File(conf.getMusicLocation() + "/abc.mp3"), MediaType.APPLICATION_OCTET_STREAM)
+      .header("Content-Disposition", "attachment; filename=\"abc_pragya.mp3\"")
+      .build();
+  }
 
 }
