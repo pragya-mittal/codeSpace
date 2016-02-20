@@ -22,7 +22,7 @@ public class DownloadServer extends Service<DownloadConfiguration> {
 
         SongDownloader songDownloader = new SongDownloader(musicLoc, jsonFile);
         songDownloader.createurlNDownloadFile();
-        DownloadResource downloadResource = new DownloadResource("src/main/resources/music");
+        DownloadResource downloadResource = new DownloadResource(musicLoc, jsonFile);
         environment.addResource(downloadResource);
 
     }

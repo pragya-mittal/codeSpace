@@ -34,7 +34,7 @@ public class SongDownloader {
         DownloadManager downloadManager;
         MusicParser musicParser = new MusicParser(jsonFile);
         List<URLObj> urls = new ArrayList<>();
-        HashMap<String, MusicConf> musicConfMap = musicParser.getMusicConf();
+        Map<String, MusicConf> musicConfMap = musicParser.getMusicConf();
         for (Map.Entry entry : musicConfMap.entrySet() ) {
             String url = "https://api.soundcloud.com/tracks/";
             musicConf = (MusicConf)entry.getValue();

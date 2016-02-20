@@ -18,14 +18,14 @@ import java.util.Map;
 public class MusicParser {
 
     private String file;
-    private HashMap<String, MusicConf> mapMusic;
+    private Map<String, MusicConf> mapMusic;
 
     public MusicParser(String file) {
         mapMusic = new HashMap<>();
         this.file = file;
     }
 
-    public HashMap<String, MusicConf> getMusicConf() {
+    public Map<String, MusicConf> getMusicConf() {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         // Convert JSON string from file to Object
@@ -37,7 +37,5 @@ public class MusicParser {
         System.out.println(mapMusic);
         return mapMusic;
     }
-
-
 
 }
