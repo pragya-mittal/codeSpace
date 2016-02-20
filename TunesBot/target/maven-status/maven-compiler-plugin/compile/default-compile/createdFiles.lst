@@ -1,0 +1,9 @@
+music/MusicConf.class
+music/DownloadManager.class
+DownloadResource.class
+DownloadServer.class
+music/MusicParser.class
+music/MusicParser$1.class
+music/MusicUtil.class
+music/SongDownloader.class
+DownloadConfiguration.class
