@@ -9,6 +9,7 @@ import java.net.URLConnection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import adserver.AdClient;
 import pojo.SongInfo;
 
 /**
@@ -27,7 +28,8 @@ public class DownloadManager {
 
     public void downLoadFiles() throws Exception {
         for (SongInfo song : songs) {
-            downloadToFile(dirname + "/" + song.getSongName() + "_" + song.getSongName() + ".mp3", song.getUrl());
+            String musicFile=dirname + "/" + song.getSongName() + "_" + song.getArtistName() + ".mp3";
+            downloadToFile(musicFile, song.getUrl());
         }
     }
 
@@ -44,6 +46,7 @@ public class DownloadManager {
                 outstream.write(buffer, 0, len);
             }
             outstream.close();
+
         } else {
             log.info("File exists");
         }

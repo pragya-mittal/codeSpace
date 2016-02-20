@@ -1,9 +1,9 @@
 import config.AppConfig;
 import music.MusicConf;
 import music.MusicParser;
+import music.SongDownloadTask;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
 
 import javax.ws.rs.GET;
@@ -15,9 +15,7 @@ import javax.ws.rs.core.Response;
 
 @Path("/music")
 public class DownloadResource {
-
   AppConfig conf;
-
   public DownloadResource(AppConfig conf) {
     this.conf = conf;
   }
@@ -34,8 +32,10 @@ public class DownloadResource {
   @Path("getMusic")
   @Produces(MediaType.APPLICATION_OCTET_STREAM)
   public Response getMusic(@QueryParam("trackId") String trackId) throws Exception {
-    return Response.ok(new File(conf.getMusicLocation() + "/abc.mp3"), MediaType.APPLICATION_OCTET_STREAM)
-      .header("Content-Disposition", "attachment; filename=\"abc_pragya.mp3\"")
+    SongDownloadTask task = new SongDownloadTask(conf);
+    String fileName = task.getSongName(trackId);
+    return Response.ok(new File(conf.getMusicLocation()+"/" + fileName + ".mp3"), MediaType.APPLICATION_OCTET_STREAM)
+      .header("Content-Disposition", "attachment; filename=\"" + fileName + ".mp3\"")
       .build();
   }
 
