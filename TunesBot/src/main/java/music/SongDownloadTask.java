@@ -20,17 +20,15 @@ public class SongDownloadTask extends TimerTask {
   public void run() {
     try {
 
-      System.out.println("****** Rnning.....");
+      System.out.println("****** Running.....");
       MusicConf musicConf;
       DownloadManager downloadManager;
       MusicParser musicParser = new MusicParser(conf.getMusicMetaLocation());
       List<SongInfo> urls = new ArrayList<>();
       Map<String, MusicConf> musicConfMap = musicParser.getMusicConf();
       for (Map.Entry entry : musicConfMap.entrySet()) {
-        String url = "https://api.soundcloud.com/tracks/";
         musicConf = (MusicConf) entry.getValue();
-        url += musicConf.getTrackid() + "/stream?client_id=" + client_id;
-        urls.add(new SongInfo(musicConf.getTitle(), musicConf.getArtist(), url));
+        urls.add(new SongInfo(musicConf.getTitle(), musicConf.getArtist(), musicConf.getUrl()));
       }
       downloadManager = new DownloadManager(conf.getMusicLocation(), urls.toArray(new SongInfo[urls.size()]));
       downloadManager.downLoadFiles();

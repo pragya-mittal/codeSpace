@@ -7,6 +7,7 @@ public class MusicConf {
     private String title;
     private String artist;
     private String trackid;
+    private String url;
 
     public String getTitle() {
         return title;
@@ -30,5 +31,13 @@ public class MusicConf {
 
     public void setTrackid(String trackid) {
         this.trackid = trackid;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

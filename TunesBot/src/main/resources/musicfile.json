@@ -1,12 +1,122 @@
 {
-  "1":{
-    "title":"Love Yourself",
-    "artist":"Justin Bieber",
-    "trackid":"232886537"
+  "1" : {
+    "artist":"Broke For Free",
+    "title":"Night Owl",
+    "url":"https://freemusicarchive.org/music/download/f2c16f166be7f303499bb804e04779f15d4c1e6d",
+    "trackid":"f2c16f166be7f303499bb804e04779f15d4c1e6d"
   },
-  "2":{
-    "title":"Stressed Out",
-    "artist":"twenty one pilots",
-    "trackid":"238429475"
+  "2" : {
+    "artist":"Tours",
+    "title":"Enthusiast",
+    "url":"https://freemusicarchive.org/music/download/711fbd1474a8ecca4f8f5ade1cf16f2b7a14eea7",
+    "trackid":"711fbd1474a8ecca4f8f5ade1cf16f2b7a14eea7"
+  },
+  "3" : {
+    "artist":"Jahzzar",
+    "title":"Siesta",
+    "url":"https://freemusicarchive.org/music/download/262b5acc9f4a08cd602855f8897cb854bcf76a6a",
+    "trackid":"262b5acc9f4a08cd602855f8897cb854bcf76a6a"
+  },
+  "4" : {
+    "artist":"Podington Bear",
+    "title":"Just Watching",
+    "url":"https://freemusicarchive.org/music/download/f8acc4e61c86f08c4d16cc0dde613a927b96cca2",
+    "trackid":"f8acc4e61c86f08c4d16cc0dde613a927b96cca2"
+  },
+  "5" : {
+    "artist":"Monk Turner + Fascinoma",
+    "title":"It's Your Birthday!",
+    "url":"https://freemusicarchive.org/music/download/fc9636a07b2ae0d5768fd09fee10424da70c7bd9",
+    "trackid":"fc9636a07b2ae0d5768fd09fee10424da70c7bd9"
+  },
+  "6" : {
+    "artist":"The Kyoto Connection",
+    "title":"Hachiko (The Faithtful Dog)",
+    "url":"https://freemusicarchive.org/music/download/73aeb91ab37ea9b4def87fa09dd4cc84ae8e40e3",
+    "trackid":"73aeb91ab37ea9b4def87fa09dd4cc84ae8e40e3"
+  },
+  "7" : {
+    "artist":"BoxCat Games",
+    "title":"Epic Song",
+    "url":"https://freemusicarchive.org/music/download/7f4d5d1d70c83049405813abf8643acacf66b31f",
+    "trackid":"7f4d5d1d70c83049405813abf8643acacf66b31f"
+  },
+  "8" : {
+    "artist":"Velella Velella",
+    "title":"3 To The 6 To The 0",
+    "url":"https://freemusicarchive.org/music/download/7d54c05de080880f01bfc16b6551d3511585689b",
+    "trackid":"7d54c05de080880f01bfc16b6551d3511585689b"
+  },
+  "9" : {
+    "artist":"Jason Shaw",
+    "title":"RUNNING WATERS",
+    "url":"https://freemusicarchive.org/music/download/737d11ca177f806a8da869e54b12f93a29dbe69a",
+    "trackid":"737d11ca177f806a8da869e54b12f93a29dbe69a"
+  },
+  "10" : {
+    "artist":"Black Ant",
+    "title":"Fater Lee",
+    "url":"https://freemusicarchive.org/music/download/487d5e29d1ad6e72236b9dbfa34f1113cfb85d2c",
+    "trackid":"487d5e29d1ad6e72236b9dbfa34f1113cfb85d2c"
+  },
+  "11" : {
+    "artist":"sorin urzica",
+    "title":"Happy Birthday to You - Special Song",
+    "url":"https://freemusicarchive.org/music/download/022688a1a32ad2b2c06e921f791c17481be1d1a9",
+    "trackid":"022688a1a32ad2b2c06e921f791c17481be1d1a9"
+  },
+  "12" : {
+    "artist":"David Szesztay",
+    "title":"Above Us 2",
+    "url":"https://freemusicarchive.org/music/download/db508c11625a3b4da9caf314881bf3ffe912738a",
+    "trackid":"db508c11625a3b4da9caf314881bf3ffe912738a"
+  },
+  "13" : {
+    "artist":"Podington Bear",
+    "title":"Golden Hour",
+    "url":"https://freemusicarchive.org/music/download/578954995aa063b86f6f001ea921d4a9f308a218",
+    "trackid":"578954995aa063b86f6f001ea921d4a9f308a218"
+  },
+  "14" : {
+    "artist":"Kevin MacLeod",
+    "title":"Ghost Dance",
+    "url":"https://freemusicarchive.org/music/download/196ff3cc4701245427418acd44c7625430668d2e",
+    "trackid":"196ff3cc4701245427418acd44c7625430668d2e"
+  },
+  "15" : {
+    "artist":"Jahzzar",
+    "title":"The last ones",
+    "url":"https://freemusicarchive.org/music/download/e3565576baadcd083739e95828fd4c432782501f",
+    "trackid":"e3565576baadcd083739e95828fd4c432782501f"
+  },
+  "16" : {
+    "artist":"Podington Bear",
+    "title":"Transmogrify",
+    "url":"https://freemusicarchive.org/music/download/ca3151769503280fde52518366af95aff00592ec",
+    "trackid":"ca3151769503280fde52518366af95aff00592ec"
+  },
+  "17" : {
+    "artist":"Broke For Free",
+    "title":"Something Elated",
+    "url":"https://freemusicarchive.org/music/download/5ac3ae84c7b1dde001f86d460af88e6d1207c1c1",
+    "trackid":"5ac3ae84c7b1dde001f86d460af88e6d1207c1c1"
+  },
+  "18" : {
+    "artist":"Kai Engel",
+    "title":"Moonlight Reprise",
+    "url":"https://freemusicarchive.org/music/download/a40f554b41b34a3af19647a43a1f7dd8195a11ab",
+    "trackid":"a40f554b41b34a3af19647a43a1f7dd8195a11ab"
+  },
+  "19" : {
+    "artist":"Velella Velella",
+    "title":"That's A Terrible Name For A Song",
+    "url":"https://freemusicarchive.org/music/download/136ae0b71bd0768fba5b0f279e97ebdc3a38a422",
+    "trackid":"136ae0b71bd0768fba5b0f279e97ebdc3a38a422"
+  },
+  "20" : {
+    "artist":"Podington Bear",
+    "title":"T Shirt Weather",
+    "url":"https://freemusicarchive.org/music/download/639067cba19752d1e8c0376e06b1cd228a84f9f5",
+    "trackid":"639067cba19752d1e8c0376e06b1cd228a84f9f5"
   }
 }

@@ -8,7 +8,8 @@ import music.SongDownloadTask;
 
 public class DownloadServer extends Application<DownloadConfiguration> {
 
-  private final long MILLIS_IN_HOUR = 60 * 60 * 1000;
+//  private final long MILLIS_IN_HOUR = 60 * 60 * 1000;
+  private final long MILLIS_IN_HOUR = 5 * 1000;
 
   public static void main(String[] args) throws Exception {
     new DownloadServer().run(args);
@@ -27,7 +28,7 @@ public class DownloadServer extends Application<DownloadConfiguration> {
 
   private void scheduleDownloader(AppConfig conf) {
     Timer timer = new Timer();  //At this line a new Thread will be created
-    timer.schedule(new SongDownloadTask(conf), 5000);
+    timer.schedule(new SongDownloadTask(conf), MILLIS_IN_HOUR);
   }
 
 }
